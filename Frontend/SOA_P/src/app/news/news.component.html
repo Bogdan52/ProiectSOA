@@ -1,0 +1,25 @@
+<mat-grid-list
+  cols="1"
+  rowHeight="200px"
+  rowWidth="400px"
+  gutterSize="30px"
+  class="grid-layout"
+>
+  <mat-grid-tile *ngFor="let newsArticle of news">
+    <td>
+      <mat-card class="example-card mat-elevation-z8">
+        <mat-card-header>
+          <mat-card-title>{{ newsArticle.titlu }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ newsArticle.content }}
+          </p>
+        </mat-card-content>
+        <mat-card-footer class="posting-date">
+          <p>Data postarii: {{ newsArticle.data }}</p>
+        </mat-card-footer>
+      </mat-card>
+    </td>
+  </mat-grid-tile>
+</mat-grid-list>

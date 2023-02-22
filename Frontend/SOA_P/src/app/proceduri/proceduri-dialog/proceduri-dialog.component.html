@@ -1,0 +1,10 @@
+<div mat-dialog-content>
+    <pdf-viewer [src]="pdfVal"
+      [render-text]="true"
+      [original-size]="true"
+      >
+    </pdf-viewer>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="close()">Close</button>
+  
+  </div>{{pdfVal}}

@@ -1,0 +1,42 @@
+<mat-grid-list
+  cols="{{ cols }}"
+  rowHeight="400px"
+  gutterSize="30px"
+  class="grid-layout"
+>
+  <mat-grid-tile *ngFor="let procedura of proceduri">
+    <mat-card>
+      <img
+        id="card-image"
+        mat-card-image
+        src="../../assets/images/thumbnails/default.jpg"
+        alt="thumbnail"
+      />
+      <mat-card-content>
+        <mat-card-title matTooltip="{{ procedura.name }}">{{
+          procedura.name
+        }}</mat-card-title>
+        <mat-card-subtitle>{{
+          procedura.text || " "
+        }}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="openDialog(procedura._id)"
+        >
+          View
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+<!-- <div>		<pdf-viewer [src]="pdfVal"
+  [render-text]="true"
+  [original-size]="true"
+  >
+</pdf-viewer></div>
+{{pdfVal}} -->

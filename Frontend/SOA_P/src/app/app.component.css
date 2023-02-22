@@ -1,0 +1,8 @@
+.active-link{
+    background-color: lightgray;
+}
+.logo-image{
+    width: 350px;
+    height: 55px;
+    overflow: hidden;
+}
